@@ -21,6 +21,11 @@ elif [ "${PYTHON_VERSION}" = "3.11" ]; then
     PY_VER=cp311-cp311
 elif [ "${PYTHON_VERSION}" = "3.12" ]; then
     PY_VER=cp312-cp312
+elif [ "${PYTHON_VERSION}" = "3.13" ]; then
+    PY_VER=cp313-cp313
+else
+    echo "Unsupported Python version: ${PYTHON_VERSION}" >&2
+    exit 1
 fi
 
 PY_EXE=/opt/python/"${PY_VER}"/bin/python3
